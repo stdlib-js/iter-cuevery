@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import iterCuEvery from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-cuevery@deno/mod.js';
+import iterCuEvery from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-cuevery@v0.1.1-deno/mod.js';
 ```
 
 #### iterCuEvery( iterator )
@@ -114,7 +114,7 @@ The returned [iterator][mdn-iterator-protocol] protocol-compliant object has the
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
 import iterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-map@deno/mod.js';
-import iterCuEvery from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-cuevery@deno/mod.js';
+import iterCuEvery from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-cuevery@v0.1.1-deno/mod.js';
 
 function threshold( r ) {
     return ( r > 0.1 );
