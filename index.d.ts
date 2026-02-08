@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2024 The Stdlib Authors.
@@ -16,18 +16,25 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { Iterator as Iter, IterableIterator } from '@stdlib/types/iter';
+
+// Define a union type representing both iterable and non-iterable iterators:
+type Iterator = Iter | IterableIterator;
 
 /**
-* Create an iterator which cumulatively tests whether every iterated value is truthy.
+* Returns an iterator which cumulatively tests whether every iterated value is truthy.
 *
-* @module @stdlib/iter-cuevery
+* @param iterator - input iterator
+* @returns iterator
 *
 * @example
 * var array2iterator = require( '@stdlib/array-to-iterator' );
-* var iterCuEvery = require( '@stdlib/iter-cuevery' );
 *
-* var arr = array2iterator( [ true, true, false, true, false ] );
+* var arr = array2iterator( [ true, true, true, false, true ] );
 *
 * var it = iterCuEvery( arr );
 *
@@ -38,7 +45,7 @@
 * // returns true
 *
 * v = it.next().value;
-* // returns false
+* // returns true
 *
 * v = it.next().value;
 * // returns false
@@ -49,12 +56,9 @@
 * var bool = it.next().done;
 * // returns true
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function iterCuEvery( iterator: Iterator ): Iterator;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = iterCuEvery;
